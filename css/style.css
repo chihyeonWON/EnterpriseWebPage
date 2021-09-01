@@ -1,13 +1,74 @@
 @charset 'utf-8';
 * {
-	margin: 0px;
-	padding: 0px;
-	box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 ul,
 ol {
-	list-style: none;
+  list-style: none;
 }
 a {
-	text-decoration: none;
+  text-decoration: none;
+}
+
+/* header */
+header {
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+}
+
+header .inner {
+  width: 1180px;
+  height: 120px;
+  margin: 0px auto;
+  position: relative; /* 자식 absolute 요소의 기준점 설정" */
+}
+
+header .inner h1 {
+  position: absolute;
+  left: 0px;
+  bottom: 15px;
+}
+header .inner h1 a {
+  font: bold 24px/1 "arial"; /* font 축약형 : font-weight:bold, font-size:24px, line-height:1, font-family:"arial" */
+  color: #444;
+}
+
+header .inner .util {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+
+header .inner .util li {
+  float: left;
+}
+
+header .inner .util li a {
+  display: block;
+  font: 12px/1 "arial";
+  color: #999;
+  padding: 0px 10px;
+}
+
+header .inner #gnb {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+header .inner #gnb li {
+  float: left;
+}
+header .inner #gnb li a {
+  display: block; /* 인라인 요소는 block을 설정하여 크기 조절 가능"*/
+  font: bold 15px/1 "arial";
+  color: #555;
+  padding: 20px 40px;
+  transition: all 0.5s;
+}
+
+header .inner #gnb li a:hover {
+  background: #555;
+  color: #fff;
 }
